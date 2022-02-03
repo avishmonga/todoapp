@@ -4,9 +4,8 @@ import axios from 'axios'
 function TodoInput({getData}) {
     const [text,settext] = useState("")
     const [texttwo,settexttwo] = useState("")
-    const [word,setword] = useState("")
     function sendData(text){
-        const data = { status: false, title: text,body:texttwo };
+        const data = { delete:false,status: false, title: text,body:texttwo };
         console.log(data)
         axios.post("http://localhost:3000/users", data)
         getData()
